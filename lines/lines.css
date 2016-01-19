@@ -1,0 +1,21 @@
+code {
+    display: inline-block;
+    border: 1px black solid;
+    padding: 1em;
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    counter-reset: line;
+}
+
+code .line {
+    display: block;
+    counter-increment: line;
+}
+
+code .line::before {
+    display:inline-block;
+    width:2em;
+    border-right: 1px black solid;
+    padding-right: 1em;
+    margin-right: 1em;
+    content: counter(line);
+}
